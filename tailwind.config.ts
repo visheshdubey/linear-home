@@ -9,6 +9,22 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				regular: [
+					'"Inter"',
+					'"SF Pro Display"',
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'"Segoe UI"',
+					'"Roboto"',
+					'"Oxygen"',
+					'"Ubuntu"',
+					'"Cantarell"',
+					'"Open Sans"',
+					'"Helvetica Neue"',
+					'sans-serif'
+				],
+			},
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
@@ -77,6 +93,7 @@ const config: Config = {
 				'linear-selection-text': 'var(--color-selection-text)',
 				'linear-focus-ring': 'var(--focus-ring-color)',
 				'linear-overlay-primary': 'var(--color-overlay-primary)',
+				'linear-kbd-bg': 'var(--color-kbd-bg)',
 
 				'linear-white': 'var(--color-white)',
 				'linear-black': 'var(--color-black)',
@@ -113,7 +130,23 @@ const config: Config = {
 				'linear-semibold': 'var(--font-weight-semibold)',
 				'linear-bold': 'var(--font-weight-bold)',
 			},
+			fontSize: {
+				'linear-micro': 'var(--font-size-micro)',
+				'linear-micro-plus': 'var(--font-size-microPlus)',
+				'linear-mini': 'var(--font-size-mini)',
+				'linear-mini-plus': 'var(--font-size-miniPlus)',
+				'linear-small': 'var(--font-size-small)',
+				'linear-small-plus': 'var(--font-size-smallPlus)',
+				'linear-regular': 'var(--font-size-regular)',
+				'linear-regular-plus': 'var(--font-size-regularPlus)',
+				'linear-large': 'var(--font-size-large)',
+				'linear-large-plus': 'var(--font-size-largePlus)',
+				'linear-title-1': 'var(--font-size-title1)',
+				'linear-title-2': 'var(--font-size-title2)',
+				'linear-title-3': 'var(--font-size-title3)',
+			},
 			spacing: {
+				'linear-header-max-width': 'var(--header-max-width)',
 				'linear-header-height': 'var(--header-height)',
 				'linear-header-top': 'var(--header-top)',
 				'linear-page-padding-default': 'var(--page-padding-default)',
@@ -121,6 +154,26 @@ const config: Config = {
 				'linear-page-padding-right': 'var(--page-padding-right)',
 				'linear-page-padding-y': 'var(--page-padding-y)',
 			},
+			zIndex: {
+				'layer-max': 'var(--layer-max)',
+				'layer-debug': 'var(--layer-debug)',
+				'layer-skip-nav': 'var(--layer-skip-nav)',
+				'layer-tooltip': 'var(--layer-tooltip)',
+				'layer-toasts': 'var(--layer-toasts)',
+				'layer-dialog': 'var(--layer-dialog)',
+				'layer-dialog-overlay': 'var(--layer-dialog-overlay)',
+				'layer-command-menu': 'var(--layer-command-menu)',
+				'layer-popover': 'var(--layer-popover)',
+				'layer-context-menu': 'var(--layer-context-menu)',
+				'layer-overlay': 'var(--layer-overlay)',
+				'layer-header': 'var(--layer-header)',
+				'layer-scrollbar': 'var(--layer-scrollbar)',
+				'layer-footer': 'var(--layer-footer)',
+				'layer-3': 'var(--layer-3)',
+				'layer-2': 'var(--layer-2)',
+				'layer-1': 'var(--layer-1)',
+			},
+
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
