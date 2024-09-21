@@ -1,7 +1,6 @@
 const svg = () => (
     <svg
         height="16"
-        width="16"
         viewBox="0 0 400 100"
         fill="currentColor"
         color="currentColor"
