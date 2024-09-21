@@ -358,6 +358,7 @@ body {
     hsla(0, 0%, 45%, 0) 80%
   );
 }
+
 .ambient-light-b {
   transform: rotate(-45deg) translate(5%, -50%);
   transform-origin: top left;
@@ -369,6 +370,7 @@ body {
     transparent 100%
   );
 }
+
 .ambient-light-c {
   position: absolute;
   border-radius: var(--radius-rounded);
@@ -384,4 +386,23 @@ body {
     hsla(0, 0%, 45%, 0.02) 80%,
     transparent 100%
   );
+}
+
+.font-variation-opsz-28 {
+  font-variation-settings: "opsz" 28;
+}
+
+.hero-perpective-transform {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 1px solid #1e1e1e;
+  background: var(--color-bg-primary);
+  width: 1600px;
+  height: 900px;
+  margin: 280px auto auto;
+  transform: translateX(2%) scale(1.2) rotateX(47deg) rotateY(31deg)
+    rotate(324deg);
+  transform-origin: top left;
+  backface-visibility: hidden;
 }

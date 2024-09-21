@@ -52,26 +52,29 @@ const PrimaryButtonNavItem: React.FC<MenuItemProps> = (props) =>
 
 const Navbar = (props: NavbarProps) => {
   return (
-    <nav className="fixed top-4 flex-col w-full inset-0 flex items-center h-12 overflow-hidden px-3 max-w-linear-header-max-width mx-auto text-linear-small z-layer-header border border-linear-header-border rounded-linear-header-radius bg-neutral-950/20 backdrop-blur-xl saturate-150">
-      <ul className="flex items-center *:cursor-pointer overflow-hidden shrink-0 justify-between w-full h-12">
-        {props.items.map(item => {
-          switch (item.type) {
-            case HeaderItemType.BrandLogo:
-              return <BrandLogoNavItem className="px-2" item={item} key={item.id} />
-            case HeaderItemType.MenuItemWithLink:
-              return <LinkNavItem className="px-4" item={item} key={item.id} />
-            case HeaderItemType.MenuItemWithDropDown:
-              return <DropdownNavItem className="px-4" item={item} key={item.id} />
-            case HeaderItemType.SecondaryButton:
-              return <SecondaryButtonNavItem item={item} key={item.id} />
-            case HeaderItemType.PrimaryButton:
-              return <PrimaryButtonNavItem item={item} key={item.id} />
-            default:
-              return <></>
-          }
-        })}
-      </ul>
-    </nav>
+    <>
+      <div className="fixed top-0 w-full header-top-blur-mask" />
+      <nav className="fixed top-4 flex-col w-full inset-0 flex items-center h-12 overflow-hidden px-3 max-w-linear-header-max-width mx-auto text-linear-small z-layer-header border border-linear-bg-translucent rounded-linear-header-radius bg-neutral-950/20 backdrop-blur-xl saturate-150">
+        <ul className="flex items-center *:cursor-pointer overflow-hidden shrink-0 justify-between w-full h-12">
+          {props.items.map(item => {
+            switch (item.type) {
+              case HeaderItemType.BrandLogo:
+                return <BrandLogoNavItem className="px-2" item={item} key={item.id} />
+              case HeaderItemType.MenuItemWithLink:
+                return <LinkNavItem className="px-4" item={item} key={item.id} />
+              case HeaderItemType.MenuItemWithDropDown:
+                return <DropdownNavItem className="px-4" item={item} key={item.id} />
+              case HeaderItemType.SecondaryButton:
+                return <SecondaryButtonNavItem item={item} key={item.id} />
+              case HeaderItemType.PrimaryButton:
+                return <PrimaryButtonNavItem item={item} key={item.id} />
+              default:
+                return <></>
+            }
+          })}
+        </ul>
+      </nav>
+    </>
   );
 };
 
